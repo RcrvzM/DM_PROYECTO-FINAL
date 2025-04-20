@@ -1,7 +1,21 @@
 # DM_PROYECTO-FINAL
 
-Resumen de Módulos y Funciones
-Este resumen describe los módulos, sus funciones, y dónde se utiliza Spark en el código:
+**Objetivo**
+El modelo busca realizar un modelo predictivo base a las siguientes variables.
+
+Las variables predominantes que se utilizan para entrenar el modelo son:
+
+pib_usd: PIB en dólares estadounidenses.
+
+tasa_empleo: Tasa de empleo como porcentaje de la población.
+
+pais_index: Índice numérico que representa al país.
+
+anio: Año al que corresponden los datos.
+
+Estas variables se utilizan como features (variables predictoras) para predecir la variable objetivo tipo_cambio, que es el tipo de cambio de la moneda local frente al dólar estadounidense.
+
+**Resumen de Módulos y Funciones** < **Este resumen describe los módulos, sus funciones, y dónde se utiliza Spark en el código:**
 
 **1. Instalación y Configuración de Spark**  <  ****Módulos:** os, findspark, pyspark**
 
@@ -106,21 +120,10 @@ Entrenamiento del modelo (LinearRegression).
 
 Transformación de datos para la predicción.
 
+
+
+
 **Conclusiones:**
-
-El modelo busca realizar un modelo predictivo base a las siguientes variables.
-
-Las variables predominantes que se utilizan para entrenar el modelo son:
-
-pib_usd: PIB en dólares estadounidenses.
-
-tasa_empleo: Tasa de empleo como porcentaje de la población.
-
-pais_index: Índice numérico que representa al país.
-
-anio: Año al que corresponden los datos.
-
-Estas variables se utilizan como features (variables predictoras) para predecir la variable objetivo tipo_cambio, que es el tipo de cambio de la moneda local frente al dólar estadounidense.
 
 Se intento realizar un entrenamiento de todos los paises juntos utilizando VectorAssembler sin embargo este modelo preductivo entrego variables de salida muy bajas lo que indicaron que no era posible realizar un entrenamiento global para la preduccion ya que cada una de las variables dependen de cada pais,
 
