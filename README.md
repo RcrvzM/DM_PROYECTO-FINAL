@@ -77,3 +77,41 @@ Spark:
 Ingeniería de features (StringIndexer, VectorAssembler).
 Entrenamiento del modelo (LinearRegression).
 Transformación de datos para la predicción.
+
+**Conclusiones:**
+
+El modelo busca realizar un modelo predictivo base a las siguientes variables.
+
+Las variables predominantes que se utilizan para entrenar el modelo son:
+
+pib_usd: PIB en dólares estadounidenses.
+tasa_empleo: Tasa de empleo como porcentaje de la población.
+pais_index: Índice numérico que representa al país.
+anio: Año al que corresponden los datos.
+Estas variables se utilizan como features (variables predictoras) para predecir la variable objetivo tipo_cambio, que es el tipo de cambio de la moneda local frente al dólar estadounidense.
+
+Se intento realizar un entrenamiento de todos los paises juntos utilizando VectorAssembler sin embargo este modelo preductivo entrego variables de salida muy bajas lo que indicaron que no era posible realizar un entrenamiento global para la preduccion ya que cada una de las variables dependen de cada pais,
+
+Estos fueron los valores resultantes.
+
+Modelo global entrenado.
+R²: 0.0008
+
+RMSE: 72189.3526
+
+MAE: 3339.8067
+
+Coeficientes: [54.6650551268906,-2.1901394481731463e-10,80.5904101825595,47.36846329731525]
+
+Sin embargo al realizar un entrenamiento por pais, fueron bastante buenos base a la informacion que se tenia y variables seleccionadas dando un modelo predictivo adecuado.
+
+ -_Resultados del modelo para Mexico
+R²: 0.9609
+
+RMSE: 1.012
+
+MAE: 0.8584
+
+Coeficientes: [0.8935414171983743,-1.1037892043536777e-11,0.3828599611411305,0.0]
+
+Intercepto: -1792.5016230021602
